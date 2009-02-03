@@ -1,0 +1,37 @@
+Befunge-93 interpreter in Ruby
+Written for Ruby Quiz #184
+
+Message from my quiz submission on ruby-talk mailing list:
+
+Subject: Re: Befunge (#184)
+From: Jeff Dallien <jeff dallien.net>
+Date: Sun, 30 Nov 2008 07:29:28 +0900
+
+Here is my solution. It's not a revolutionary implementation, but I
+had an emphasis on readability and testing. I believe it correctly
+runs all the example programs from the Befunge-93 site that the C
+reference implementation does.
+
+While debugging I had a "C interpreter mode" which did a few things
+slightly differently such as division and mod with negative numbers to
+match the behaviour of the reference implementation. I eventually
+removed it for clarity since it didn't gain much, other than
+accounting for those differences.
+
+For example, the following program will output -1 when run with the C
+implementation and -2 with a standard Ruby implementation. Solutions
+to Ruby Quiz #85 have some methods which provide C-like division and
+mod.
+
+3-2/.@
+
+I couldn't find a simple solution for single character input, so it
+goes without. Thus for programs like namegame.bf you have to hit enter
+between each character.
+
+Spec file is below the source. Thanks for the interesting quiz.
+
+Jeff Dallien
+http://jeff.dallien.net/
+
+
