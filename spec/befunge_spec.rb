@@ -475,6 +475,12 @@ describe Befunger, "processing instructions" do
       end
     end
   end
+ 
+  describe "an invalid instruction" do
+    it "should raise an exception" do
+      lambda { run_program(["=@"]) }.should raise_error
+    end
+  end
 end
 
 
